@@ -1,0 +1,55 @@
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    url("https://media.istockphoto.com/photos/office-desk-table-with-supplies-flat-lay-business-workplace-and-top-picture-id1129816005?b=1&k=20&m=1129816005&s=612x612&w=0&h=ZDWJT9f8Lj6iCgF_qvFpahf6DSZnNZckvtwkWwB1MWU=");
+  background-size: cover;
+}
+.loginTitile{
+    font-size:50px ;
+    color:indianred;
+   
+}
+.loginForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .loginForm  label {
+    margin: 10px 0;
+  }
+  .loginInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .loginInput:focus {
+    outline: none;
+  }
+  
+  .loginButton {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: lightcoral;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .loginRegister {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: teal;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+  }  
