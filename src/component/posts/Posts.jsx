@@ -3,16 +3,14 @@ import Post from '../post/Post'
 
 import "./posts.css"
 
-const Posts = () => {
+const Posts = ({posts}) => {
   return (
     <div className='posts'>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       
+      {posts.map(p=>(
+            <Post post={p}/> // to use the property
+      ))}
+      
+     
      
 
     </div>

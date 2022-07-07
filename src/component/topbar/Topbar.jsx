@@ -1,25 +1,32 @@
 import React from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { Context } from '../../context/Context'
 import "./Topbar.css"
+import log2 from "../abc/log2.PNG"
 
 const Topbar = () => {
-  const user= false
+  const {user,dispatch} = useContext(Context)
+
+  const handleLogout=()=>{
+    dispatch({type:"LOGOUT"})
+  }
   return (
     <div className='top'>
     <div className="topLeft">
-        <i className=" topIcon fab fa-facebook-square"></i>
+        {/* <i className=" topIcon fab fa-facebook-square"></i>
         <i className=" topIcon fab fa-twitter-square"></i>
         <i className="  topIcon fab fa-instagram-square"></i>
-        <i className=" topIcon fab fa-pinterest-square"></i>
+        <i className=" topIcon fab fa-pinterest-square"></i> */}
+        <img className='logImg' src={log2} about='' alt=" " />
         
         </div>
     <div className="topCenter">
       <ul className="topList">
         <li className='topListItem'><Link to="/" style={{textDecoration:"none",color:"inherit"}}>Home</Link></li>
-        <li className='topListItem'><Link to="/" style={{textDecoration:"none",color:"inherit"}}>About</Link></li>
         <li className='topListItem'><Link to="/" style={{textDecoration:"none",color:"inherit"}}>Contact</Link></li>
         <li className='topListItem'><Link to="/write" style={{textDecoration:"none",color:"inherit"}}>Write</Link></li>
-        <li className='topListItem'>{ user && "Logout"}</li>
+        <li className='topListItem'onClick={handleLogout}>{ user && "Logout"}</li>
       </ul>
     </div>
     <div className="topRight">

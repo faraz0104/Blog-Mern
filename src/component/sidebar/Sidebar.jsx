@@ -1,23 +1,39 @@
+import axios from 'axios'
 import React from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import "./Sidebar.css"
+import img1 from "../abc/img1.jpg"
 
 const Sidebar = () => {
+  const [cat,setCat]=useState([])
+
+  useEffect(()=>{
+    const getCats =async ()=>{
+      const res = await axios.get("/categories")
+      setCat(res.data)
+    }
+    getCats()
+  },[])
   return (
     <div className='sidebar'>
     <div className="sidebarItem">
         <span className="sidebarTitle">About Me</span>
-        <img  src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg" alt="abc" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic facilis ut qui quo, quia cum tempore velit libero enim nostrum laborum aspernatur optio ad omnis porro illum. Aperiam, adipisci nesciunt!
-        Qui est quis iste facilis dolorum ducimus sit deleniti laudantium architecto perspiciatis perferendis neque fuga odio, culpa, voluptatem praesentium, dolorem alias? Doloribus nulla id necessitatibus repudiandae maxime quod. Possimus, ducimus.</p>
+        <img  src={img1} alt="abc" className='imgg'/>
+        <p>I am a front-end web developer. I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations.I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations.A responsive design makes your website accessible to all users, regardless of their device.</p>
     </div>
     <div className="sidebarItem">
         <span className="sidebarTitle">Categories</span>
         <ul className="sidebarList">
-            <li className="sidebarListItem">Life </li>
-            <li className="sidebarListItem">Music</li>
-            <li className="sidebarListItem">Technology</li>
-            <li className="sidebarListItem">Sports</li>
-            <li className="sidebarListItem">Weather</li>
+          {cat.map(c=>(
+            <Link to={`/?cat=${c.name}`} className="link">
+             <li className="sidebarListItem">{c.name} </li>
+            </Link>
+           
+          ))}
+            
+
         </ul>
     </div>
     <div className="sidebarItem"></div>

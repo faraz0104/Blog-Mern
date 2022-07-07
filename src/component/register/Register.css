@@ -44,8 +44,8 @@
     }
     .registersButton {
       position: absolute;
-      top: 60px;
-      right: 20px;
+      top: 100px;
+      right: 100px;
       background-color: teal;
       cursor: pointer;
       padding: 10px;

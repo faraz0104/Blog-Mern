@@ -41,11 +41,16 @@
     border: none;
     border-radius: 10px;
     text-align: center;
+    margin-top: 20px;
+  }
+  .loginButton:disabled{
+    cursor: not-allowed;
+    background-color: aqua;
   }
   .loginRegister {
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 100px;
+    right: 100px;
     background-color: teal;
     cursor: pointer;
     padding: 10px;

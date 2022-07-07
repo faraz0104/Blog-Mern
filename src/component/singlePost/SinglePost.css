@@ -19,11 +19,13 @@
     margin: 10px;
     font-size: 28px;
     font-family: "Lora", sans-serif;
+    margin-top: 15px;
+
   }
   
   .singlePostEdit {
     float: right;
-    font-size: 16px;
+    font-size: 26px;
   }
   
   .singlePostIcon {
@@ -43,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    color: #be9656;
+    color:coral;
     font-family: "Varela Round", Arial, Helvetica, sans-serif;
   }
   
@@ -53,7 +55,7 @@
   
   .singlePostDesc {
     color: #666;
-    font-size: 18px;
+    font-size: 30px;
     line-height: 25px;
   }
   
@@ -62,5 +64,26 @@
     font-size: 30px;
     font-weight: 600;
   }
- 
+.updateInput{
+  width:60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 100px;
+}
+
+  .UpdateButton{
+   
+    display: flex;
+    margin-left: 100px;
+    margin-top: 20px;
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+  }
   
